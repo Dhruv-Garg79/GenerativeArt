@@ -43,8 +43,8 @@ class ArtCanvas(context: Context) : View(context) {
         var distance = 0.0
         for (i in 0..1000) {
             canvas.drawCircle(
-                (w / 2 + (distance * atan(distance) * sin(distance) * cos(distance))).toFloat(),
-                (20 + (distance * tan(distance) * sin(distance) * cos(distance))).toFloat(),
+                (w / 2 + (distance * atan(distance) * sin(distance) * cos(distance/2))).toFloat(),
+                (h / 2 + (distance * tan(distance) * sin(distance/2) * cos(distance))).toFloat(),
                 6f - (0.5f * (initIter - iter)),
                 paint
             )
